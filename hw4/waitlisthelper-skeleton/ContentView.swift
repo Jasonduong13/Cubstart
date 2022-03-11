@@ -28,15 +28,15 @@ struct ContentView: View {
                         VStack {
                             Spacer()
                             Text("WILL YOU GET OFF THE WAITLIST?")
-                                .font(.system(size: 30))
+                                .font(.system(size: 50))
                                 .fontWeight(.bold)
                                 .font(.largeTitle)
                                 .foregroundColor(Color.black)
+                                .padding(.top, 10.0)
                                 .padding(.horizontal, 5.0)
-                                .font(.largeTitle)
+                    
                                 
-                        
-
+    
                             Spacer()
                             HStack {
                                 Text("Place on Waitlist \(waitlistPlace, specifier: "%.0f")").font(.system(size: 15.0))
@@ -62,8 +62,9 @@ struct ContentView: View {
                                 text = getFeedbackText()
                                 calculate = true
                             } .buttonStyle(CustomButton())
-                                .background(Color.green)
-                                .foregroundColor(.white)
+                                .background(.purple)
+                                .foregroundColor(.gray)
+                                .font(.largeTitle)
                             Spacer()
                             
                         } .padding()
@@ -83,11 +84,12 @@ struct ContentView: View {
                         .ignoresSafeArea()
                     VStack {
                         HStack {
-                            Text("MY \nCLASSES")
-                            Text("I am so behind on work soarry")
+
+                            Text("I am so \n behind on work sorry")
                                 .font(.system(size: 40, weight: .bold))
                                 .foregroundColor(Color.black)
-                                .padding()
+                                .padding(.top, 200)
+                                .padding(.leading, 100)
                             Spacer()
                         } .padding()
 
@@ -155,8 +157,10 @@ struct ResultView: View {
                                   Image(systemName: "arrow.left")
                                       .foregroundColor(.white)
                                   }
+            
                                   .navigationBarHidden(true)
                                   .buttonStyle(CustomButton())
+                                
                     Spacer()
                 } .padding()
                 Spacer()
@@ -182,7 +186,7 @@ struct CustomButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .buttonStyle(CustomButton())
-                .background(Color.green)
+                .background(Color.purple)
                 .foregroundColor(.white)
             
     }
