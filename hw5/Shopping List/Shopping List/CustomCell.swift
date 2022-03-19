@@ -22,6 +22,8 @@ struct CustomCell: View {
             Text(itemName)
                 .padding(.leading, 10)
                 .padding(.trailing, 50)
+            Spacer()
+            Spacer()
             Text(String(quantity))
                 .frame(maxWidth: .infinity, alignment: .center)
             
